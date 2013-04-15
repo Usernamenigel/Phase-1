@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Rezept name="Kuchen">
+	<itemimage>Adresse/vom/Bild.jpg</itemimage>
+	
+	<Zutaten>
+		<Butter einheit="gramm"> 200 </Butter>
+		<Zucker einheit="gramm"> 200 </Zucker>
+		<Schockolade einheit="gramm"> 200 </Schockolade>
+		<Mehl einheit="gramm"> 120 </Mehl>
+		<Backpulver einheit="teelöffel"> 1/2 </Backpulver>
+		<Vanillezucker einheit="teelöffel"> 1 </Vanillezucker>
+		<Eier einheit="Stück"> 4 </Eier>
+	</Zutaten>
+
+	<Zubereitung>
+		<Arbeitszeit einheit="Stunden"> 1 </Arbeitszeit>
+		<Schwierigkeit> Normal </Schwierigkeit>
+		<Brennwert einheit="kcal"> 300 </Brennwert>
+		<Beschreibung>
+			<Schritt>Backofen vorheizen</Schritt>
+			<Schritt>Butter und Eier mischen</Schritt>
+			<Schritt>Kuchen backen</Schritt>
+		 </Beschreibung>
+	</Zubereitung>
+
+	<Kommentare>
+		<Benutzer name="Benutzer1">Kuchen ist lecker</Benutzer>
+		<Benutzer name="Benutzer2">Kuchen ist nicht lecker</Benutzer>
+	</Kommentare>
+</Rezept>

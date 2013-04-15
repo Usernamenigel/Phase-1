@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Gruppen>
+	<Gruppenleiter>
+	    <Vorname>Nigel</Vorname>
+	    <Nachname>Frangenberg</Nachname>
+	    <Email>name@web.de</Email>
+	    <Geburtsdatum>26.02.90</Geburtsdatum>
+	    <Erfahrung>Keine</Erfahrung>
+	    <Schlagzeug>Nein</Schlagzeug>
+	 	<Anmerkung> Keine </Anmerkung>
+    
+	    <Teilnehmer nr="2">
+	   		<Vorname>Anderer</Vorname>
+	    	<Nachname>Name</Nachname>
+	    	<Email>ander@email.de</Email>
+	    	<Geburtsdatum>26.02.33</Geburtsdatum>
+	    	<Erfahrung>Viel</Erfahrung>
+	    	<Schlagzeug>Jan</Schlagzeug>
+	    </Teilnehmer>
+	    
+	</Gruppenleiter>
+</Gruppen>

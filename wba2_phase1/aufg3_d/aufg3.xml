@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Kochbuch>
+    <Rezept Name="Butterbrot">
+        <Zutaten>
+            <Zutat Messeinheit="Stück" Anzahl="3">Brot</Zutat>
+            <Zutat Messeinheit="G" Anzahl="2"> Butter</Zutat>
+            <Zutat Messeinheit="TL" Anzahl="200"> Salz</Zutat>
+        </Zutaten>
+        <Zubereitung Arbeitszeit="5" Schwierigkeit="Simpel" Brennwert="300">
+            <Beschreibung>
+                <Schritt Schrittnr="1">Butter aus dem Kühlschrank</Schritt>
+                <Schritt Schrittnr="2"> Brot mit Butter bestreichen </Schritt>
+                <Schritt Schrittnr="3"> 200 Teelöffel Salz aufs Brot </Schritt>
+            </Beschreibung>
+        </Zubereitung>
+        <Kommentare>
+            <Benutzer Bname="Hans">Schmeckt nicht</Benutzer>
+            <Benutzer Bname="HANSIMGLUECK">KEIN</Benutzer>
+            <Benutzer Bname="Nasdasd">asdasdasd</Benutzer>
+        </Kommentare>
+    </Rezept>
+    <Rezept Name="Warme Milch">
+        <Zutaten>
+            <Zutat Messeinheit="ML" Anzahl="400"> Milch</Zutat>
+            <Zutat Messeinheit="G" Anzahl="100"> Salz</Zutat>
+        </Zutaten>
+        <Zubereitung Arbeitszeit="5" Schwierigkeit="Schwer" Brennwert="300">
+            <Beschreibung>
+                <Schritt Schrittnr="1"> Milch warm machen</Schritt>
+                <Schritt Schrittnr="2"> Salz mit Milch verrühren</Schritt>
+            </Beschreibung>
+        </Zubereitung>
+        <Kommentare>
+            <Benutzer Bname="Nigel"> Schmeckt</Benutzer>
+            <Benutzer Bname="Asdf"> Schmeckt sehr gut</Benutzer>
+        </Kommentare>
+    </Rezept>
+</Kochbuch>

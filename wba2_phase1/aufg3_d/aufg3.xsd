@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<!-- Elemente definieren -->
+
+	<xs:element name="Bild" type="xs:anyURI" />
+
+
+
+	<!-- Attribute definieren -->
+	<xs:attribute name="Name" type="xs:string" />
+	<xs:attribute name="Arbeitszeit" type="xs:integer" />
+	<xs:attribute name="Anzahl" type="xs:integer" />
+	<xs:attribute name="Schrittnr" type="xs:positiveInteger" />
+	<xs:attribute name="Bname" type="xs:string" />
+
+	<!-- Attribute mit Restriktionen -->
+	<xs:attribute name="Schwierigkeit">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="Simpel" />
+				<xs:enumeration value="Leicht" />
+				<xs:enumeration value="Normal" />
+				<xs:enumeration value="Schwer" />
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:attribute>
+
+	<xs:attribute name="Brennwert" type="xs:integer" />
+	<xs:attribute name="Messeinheit">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="G" />
+				<xs:enumeration value="TL" />
+				<xs:enumeration value="ML" />
+				<xs:enumeration value="Stück" />
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:attribute>
+
+
+	<!-- Complex Types definieren -->
+
+
+	<xs:element name="Kommentare">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Benutzer" maxOccurs="255" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+
+	<xs:element name="Benutzer">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:string">
+					<xs:attribute ref="Bname" />
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="Schritt">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:string">
+					<xs:attribute ref="Schrittnr" />
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="Beschreibung">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Schritt" minOccurs="1" maxOccurs="255" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<!-- zutat (nicht zutaten!) -->
+	<xs:element name="Zutat">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:string">
+					<xs:attribute ref="Messeinheit" />
+					<xs:attribute ref="Anzahl" />
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+
+
+	<!-- Complex-Type "zutaten" -->
+	<xs:element name="Zutaten">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Zutat"  minOccurs="1" maxOccurs="255" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+
+	<!-- Complex-Type "zubereitung" -->
+	<xs:element name="Zubereitung">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Beschreibung" minOccurs="1" maxOccurs="1" />
+			</xs:sequence>
+			<xs:attribute ref="Arbeitszeit" />
+			<xs:attribute ref="Schwierigkeit" />
+			<xs:attribute ref="Brennwert" />
+		</xs:complexType>
+	</xs:element>
+
+
+	<!-- Complex-type "Rezept", diese hat das Attribut "name" und baut sich 
+		aus den anderen CT zusammen -->
+	<xs:element name="Rezept">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Zutaten" minOccurs="1" maxOccurs="1" />
+				<xs:element ref="Zubereitung" minOccurs="1" maxOccurs="1"/>
+				<xs:element ref="Kommentare" minOccurs="1" maxOccurs="1" />
+			</xs:sequence>
+			<xs:attribute ref="Name" />
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="Kochbuch">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Rezept" minOccurs="1" maxOccurs="255" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+</xs:schema> 

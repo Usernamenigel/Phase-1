@@ -1,0 +1,9 @@
+{ 
+	"Gruppen": [ {
+		"Gruppenleiter": { "Vorname":"Nigel", "Nachname":"Frangenberg", "Email":"nigel.frangenberg@web.de", "Geburtsdatum":"26.02.90", "Erfahrung":false, "Schlagzeug":false, "Anmerkung":"Keine",
+		"Teilnehmer": [ { "Vorname":"Nigel", "Nachname":"Frangenberg", "Email":"nigel.frangenberg@web.de", "Geburtsdatum":"26.02.90", "Erfahrung":false, "Schlagzeug":false, "Anmerkung":"Keine" }
+		] }
+		}
+	]
+}
+
